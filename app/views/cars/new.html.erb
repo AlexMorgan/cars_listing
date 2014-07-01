@@ -5,8 +5,7 @@
   <%= f.label :year %>
   <%= f.text_field :year %>
 
-  <% f.label :manufacturer_id, "Manufacturer" %>
-  <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name %>
+  <%= f.collection_select( :manufacturer_id,  Manufacturer.all, :id, :name, prompt: "Manufacturer") %>
 
   <%= f.label :mileage %>
   <%= f.text_field :mileage %>

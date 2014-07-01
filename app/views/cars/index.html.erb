@@ -2,7 +2,7 @@
 
 <ul>
 <% @cars.each do |c| %>
-  <li><%= "Color: #{c.color} - Year: #{c.year} #{c.description} " %></li>
+  <li><%= "Color: #{c.color} - Year: #{c.year} #{c.description} #{c.manufacturer.name}" %></li>
 <% end %>
 </ul>
 
