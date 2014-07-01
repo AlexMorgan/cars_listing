@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 group :test, :development do
+  gem 'capybara'
+  gem 'pry-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end

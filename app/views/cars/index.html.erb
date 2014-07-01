@@ -1,0 +1,9 @@
+<h1>Cars</h1>
+
+<ul>
+<% @cars.each do |c| %>
+  <li><%= "Color: #{c.color} - Year: #{c.year} #{c.description} " %></li>
+<% end %>
+</ul>
+
+<%= link_to "Add Car", new_car_path %>

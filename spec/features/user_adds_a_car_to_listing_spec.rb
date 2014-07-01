@@ -3,13 +3,15 @@ require 'rails_helper'
 feature 'User adds a car to the listing' do
   scenario 'User successfuly adds a car to the site listing' do
     manufacturer = FactoryGirl.create(:manufacturer)
-    car = FactoryGirl.build(:car, manufacturer: manufacturer)
+    car = FactoryGirl.build(:car)
 
-    visit manufacturer_path(manufacturer)
+    visit cars_path
     click_link "Add Car"
 
     fill_in "Color", with: car.color
     fill_in "Year", with: car.year
+    fill_in "Manufacturer", with: manufacturer.name
+    select(manufacturer.name, from: "Manufacturer")
     fill_in "Mileage", with: car.mileage
     fill_in "Description", with: car.description
     click_button "Add Car"
@@ -22,7 +24,7 @@ feature 'User adds a car to the listing' do
     manufacturer = FactoryGirl.create(:manufacturer)
     car = FactoryGirl.build(:car, manufacturer: manufacturer)
 
-    visit manufacturer_path(manufacturer)
+    visit cars_path
     click_link "Add Car"
 
     fill_in "Color", with: car.color

@@ -9,5 +9,7 @@ FactoryGirl.define do
     year 1987
     mileage 983243
     description "This car is awesome!"
+
+    association :manufacturer
   end
 end
