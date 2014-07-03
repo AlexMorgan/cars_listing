@@ -15,7 +15,7 @@ class CarsController < ApplicationController
 
       redirect_to cars_path
     else
-      flash[:notice] = "There were errors in your submission"
+      flash.now[:notice] = "There were errors in your submission"
       render :new
     end
   end
