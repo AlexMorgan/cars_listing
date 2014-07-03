@@ -24,4 +24,8 @@ feature 'User adds a manufacturer to the listing site' do
 
     expect(page).to have_content("There were errors in your submission")
   end
+
+  scenario 'User adds a manufacturer already in the database' do
+    # add spec here
+  end
 end
