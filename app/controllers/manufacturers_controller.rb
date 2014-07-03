@@ -12,11 +12,9 @@ class ManufacturersController < ApplicationController
 
     if @manufacturer.save
       flash[:notice] = "Manufacturer added!"
-
       redirect_to manufacturers_path
     else
-      flash[:notice] = "There were errors in your submission"
-
+      flash.now[:notice] = "There were errors in your submission"
       render :new
     end
   end
